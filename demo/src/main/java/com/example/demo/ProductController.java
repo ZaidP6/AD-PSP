@@ -29,9 +29,40 @@ public class ProductController  {
         return ResponseEntity.ok(result);
     }
 
+    /*
+    public ResponseEntity<List<Product>> getAll(
+            @RequestParam(required = false, value = "maxPrice", defaultValue = "-1") double max,
+            @RequestParam(required = false, value = "sort", defaultValue = "no") String sortDirection
+    ){
+
+        List<Product> result = productRepository.query(max, sortDirection);
+            if (result.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+            return ResponseEntity.ok(result);
+    }
+     */
+
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody Product product){
         return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.add(product));
+    }
+
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getById (@PathVariable Long id){
+        return ResponseEntity.of(productRepository.get(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> setById(@PathVariable("id") Long productId, @RequestBody Product product){
+        return ResponseEntity.of(productRepository.edit(productId, product));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Product> deleteById(@PathVariable Long id){
+        productRepository.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 }
