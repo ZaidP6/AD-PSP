@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public class MonumentoRepository {
 
-    private HashMap<Long, Monumento> listaMonumentos = new HashMap<>();
+    private final HashMap<Long, Monumento> listaMonumentos = new HashMap<>();
 
     @PostConstruct
     public void init(){
