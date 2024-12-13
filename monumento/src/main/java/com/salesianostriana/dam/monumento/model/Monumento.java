@@ -1,17 +1,15 @@
-package com.example.demo.model;
+package com.salesianostriana.dam.monumento.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-@Builder
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Monumento {
-
     private Long id;
     private String codPais;
     private String nombrePais;
@@ -21,5 +19,4 @@ public class Monumento {
     private String nombreMon;
     private String descripcion;
     private String urlImagen;
-
 }
