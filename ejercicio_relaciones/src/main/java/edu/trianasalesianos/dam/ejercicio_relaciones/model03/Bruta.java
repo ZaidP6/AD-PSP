@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Ejemplo @ManyToMany
- * Clase propietaria
+ * Clase mapped
  */
 @Entity
 @Builder
@@ -24,8 +24,7 @@ public class Bruta {
 
     private String nombre;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinColumn()
+    @ManyToMany(mappedBy = "rutas")
     private List<Bestacion> estaciones;
 
 

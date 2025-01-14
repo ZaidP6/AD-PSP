@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Ejemplo @ManyToMany
- * Clase mapped
+ * Clase propietaria
  */
 @Entity
 @Builder
@@ -26,6 +26,6 @@ public class Bestacion {
     private String direccion;
 
     //@JoinTable(name = "estacion_ruta") ver cómo indicar la nueva tabla
-    @ManyToMany(mappedBy = "estacion")
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Bruta> rutas;
 }
