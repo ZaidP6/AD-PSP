@@ -1,6 +1,6 @@
 package edu.trianasalesianos.dam.ejercicio_relaciones.model02;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.*;
 
 /**
@@ -15,6 +15,12 @@ import lombok.*;
 @ToString
 public class Areaccion {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String reaccion;
+    private String usuario;
+
+    @ManyToOne()
+    @JoinColumn(name = "publicacion", nullable = false)
+    private Apublicacion apublicacion;
 }
