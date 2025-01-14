@@ -17,7 +17,7 @@ import java.util.List;
 public class MonumentoController {
 
     @Autowired
-    private MonumentoRepository monumentoRepository;
+    private final MonumentoRepository monumentoRepository;
 
     @GetMapping
     public ResponseEntity<List<Monumento>> getAll(){

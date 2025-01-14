@@ -8,7 +8,11 @@
 		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+<<<<<<< HEAD
 	<groupId>com.salesianostriana.dam</groupId>
+=======
+	<groupId>com.salesianostriana.edu</groupId>
+>>>>>>> 31a2611b84abb6ed896f7dbc1c1eb544aad30bbf
 	<artifactId>data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>data</name>
@@ -34,10 +38,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+=======
+
+>>>>>>> 31a2611b84abb6ed896f7dbc1c1eb544aad30bbf
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>

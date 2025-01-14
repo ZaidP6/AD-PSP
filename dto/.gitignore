@@ -3,10 +3,6 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-<<<<<<< HEAD
-db/
-=======
->>>>>>> 31a2611b84abb6ed896f7dbc1c1eb544aad30bbf
 
 ### STS ###
 .apt_generated

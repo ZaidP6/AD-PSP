@@ -1,16 +1,17 @@
-package com.example.demo;
+package com.salesianostriana.dam.dto.producto.model;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class Product {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Categoria {
+
     private Long id;
-    private String name;
-    private double price;
+    private String nombre;
 }
