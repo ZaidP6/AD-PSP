@@ -26,6 +26,6 @@ public class Aperiodico {
 
     //si se genera tabla intermedia, indicar mas cosas?
     //se suelen usar ambas estrategias juntas
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}) //si se elimina noticia se elimina en todos los periodicos
     private List<Anoticia> noticias;
 }

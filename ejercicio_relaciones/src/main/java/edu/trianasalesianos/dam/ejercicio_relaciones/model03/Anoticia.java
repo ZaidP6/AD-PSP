@@ -30,7 +30,7 @@ public class Anoticia {
     private LocalDate fechaPublicacion;
     private List<String>fotos;
 
-    @ManyToMany(mappedBy = "noticias") //si se elimina noticia se elimina en todos los periodicos
+    @ManyToMany(mappedBy = "noticias")
     @JoinColumn()
     List<Aperiodico> periodicos;
 }
