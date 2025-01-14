@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Ejemplo @OneToMany
+ * Leer abajo
  */
 public class Apublicacion {
 

@@ -7,9 +7,8 @@ import java.util.List;
 
 /**
  * Ejemplo @ManyToMany
- * Clase mapped
+ * Clase propietaria
  */
-
 @Entity
 @Builder
 @NoArgsConstructor
@@ -17,15 +16,17 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Aperiodico {
+public class Bruta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nombre;
 
-    //si se genera tabla intermedia, indicar mas cosas?
-    //se suelen usar ambas estrategias juntas
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Anoticia> noticias;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinColumn()
+    private List<Bestacion> estaciones;
+
+
 }

@@ -5,6 +5,7 @@ import lombok.*;
 
 /**
  * Ejemplo @ManyToOne
+ * Clase propietaria
  */
 @Entity
 @Builder
@@ -21,6 +22,7 @@ public class Bvehiculo {
 
     private String marca;
     private String modelo;
+    private String matricula;
 
     @ManyToOne(fetch = FetchType.EAGER)
     private Bparking aparcamiento;

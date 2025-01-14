@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Ejemplo @OneToMany
+ * Clase Mapped
  */
 @Entity
 @Builder
