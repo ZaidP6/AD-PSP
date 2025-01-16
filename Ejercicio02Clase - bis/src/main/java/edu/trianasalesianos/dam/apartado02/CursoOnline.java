@@ -1,6 +1,5 @@
 package edu.trianasalesianos.dam.apartado02;
 
-import edu.trianasalesianos.dam.apartado01.Producto;
 import jakarta.persistence.*;
 import lombok.*;
 
