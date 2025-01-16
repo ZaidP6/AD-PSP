@@ -5,10 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface RepositorioLibro extends JpaRepository<Libro, Long> {
 
-    public Libro findById(long id);
+public interface RepositorioLibro extends JpaRepository<Libro, Long> {
 
     public Libro findByNombre(String nombre);
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MainDeMentira {
 
-        private final RepositorioLibro repoLibro;
+       /* private final RepositorioLibro repoLibro;
         private final RepositorioAutor repoAutor;
 
         @PostConstruct
@@ -32,7 +32,7 @@ public class MainDeMentira {
 
 
 
-    }
+    }*/
 
 
 }

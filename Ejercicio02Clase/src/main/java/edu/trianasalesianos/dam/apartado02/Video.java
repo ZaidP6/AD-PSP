@@ -1,13 +1,10 @@
-package edu.trianasalesianos.dam.manytomany;
+package edu.trianasalesianos.dam.apartado02;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
-import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Builder
@@ -16,18 +13,20 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
-public class Libro {
+public class Video {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private int orden;
     private String titulo;
-    private int anyo;
+    private String descripcion;
+    private String url;
 
-    @ManyToMany
-    @Builder.Default
-    private Set<Autor> autores = new HashSet<>();
+    @OneToMany(mappedBy = "videos", cascade = CascadeType.ALL,
+                fetch = FetchType.EAGER)
+    private CursoOnline cursoOnline;
 
     @Override
     public final boolean equals(Object o) {
@@ -36,12 +35,13 @@ public class Libro {
         Class<?> oEffectiveClass = o instanceof HibernateProxy ? ((HibernateProxy) o).getHibernateLazyInitializer().getPersistentClass() : o.getClass();
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
-        Libro libro = (Libro) o;
-        return getId() != null && Objects.equals(getId(), libro.getId());
+        Video video = (Video) o;
+        return getId() != null && Objects.equals(getId(), video.getId());
     }
 
     @Override
     public final int hashCode() {
         return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
+
 }
