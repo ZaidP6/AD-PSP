@@ -18,7 +18,7 @@ import java.util.Set;
 public class Profesor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
     private String nombre;
