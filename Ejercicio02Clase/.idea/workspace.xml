@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4a8697e-4e6a-4964-8b91-8764fc988f98" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado01/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado01/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado01/MainDeMentira.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/CursoOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/CursoOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/MainDeMentira.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/MainDeMentira.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/RepositorioProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/RepositorioProfesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Video.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ZaidP6&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ZaidP6/AD-PSP.git&quot;,
+    &quot;accountId&quot;: &quot;88b0fb3c-460e-4b72-a948-46019dcfcd72&quot;
+  }
+}</component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rj1GKNfhFHABw7yok8EkKg704I" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Unnamed.executor": "Run",
+    "Maven.Ejercicio02Clase [org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean].executor": "Run",
+    "Maven.Ejercicio02Clase [org.apache.maven.plugins:maven-deploy-plugin:3.1.3:deploy].executor": "Run",
+    "Maven.Ejercicio02Clase [org.apache.maven.plugins:maven-install-plugin:3.1.3:install].executor": "Run",
+    "Maven.Ejercicio02Clase [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor": "Run",
+    "Maven.ejercicio02clase [org.apache.maven.plugins:maven-clean-plugin:3.4.0:clean].executor": "Run",
+    "Maven.ejercicio02clase [org.apache.maven.plugins:maven-install-plugin:3.1.3:install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pilar/Documents/Salesianos DAM/AD-PSP/Ejercicio02Clase - bis",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="edu.trianasalesianos.dam.Main" />
+      <module name="Ejercicio02Clase" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4a8697e-4e6a-4964-8b91-8764fc988f98" name="Changes" comment="" />
+      <created>1737057573048</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737057573048</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
