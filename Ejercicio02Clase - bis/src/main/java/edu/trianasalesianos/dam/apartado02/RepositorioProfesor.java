@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RepositorioProfesor extends JpaRepository<Profesor, Long> {
 
-    public Profesor getByName();
+    public Profesor getByNombre(String nombre);
 }

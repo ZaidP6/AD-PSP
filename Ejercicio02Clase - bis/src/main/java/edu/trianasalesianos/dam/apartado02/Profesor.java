@@ -26,11 +26,24 @@ public class Profesor {
     private double puntuacion;
 
 
-    @JoinColumn(name = "cursos")
-    @OneToMany(mappedBy = "profesor")
+
+    @OneToMany(mappedBy = "profesor", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     @ToString.Exclude
     private Set<CursoOnline> cursos = new HashSet<>();
+
+    //HELPERS
+
+    public void addCursoOnline(CursoOnline curso){
+        curso.setProfesor(this);
+        this.cursos.add(curso);
+    }
+
+    public void deleteCursoOnline(CursoOnline curso){
+
+        this.cursos.remove(curso);
+        curso.setProfesor(null);
+    }
 
     @Override
     public final boolean equals(Object o) {

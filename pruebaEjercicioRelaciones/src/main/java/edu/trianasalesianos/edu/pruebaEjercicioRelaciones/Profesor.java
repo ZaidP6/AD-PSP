@@ -26,7 +26,6 @@ public class Profesor {
     private double puntuacion;
 
 
-    @JoinColumn(name = "cursos")
     @OneToMany(mappedBy = "profesor")
     @Builder.Default
     @ToString.Exclude

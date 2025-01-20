@@ -22,7 +22,7 @@ public class CursoOnline {
     private double puntuacion;
 
 
-    @ManyToOne(cascade = CascadeType.PERSIST,
+    @ManyToOne(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)
     private Profesor profesor;
 

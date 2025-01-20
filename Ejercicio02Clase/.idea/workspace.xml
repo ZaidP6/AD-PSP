@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4a8697e-4e6a-4964-8b91-8764fc988f98" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado01/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado01/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado01/MainDeMentira.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/CursoOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/CursoOnline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/MainDeMentira.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/MainDeMentira.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/RepositorioProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/RepositorioProfesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/trianasalesianos/dam/apartado02/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio02Clase - bis/db/database.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio02Clase - bis/db/database.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/Ejercicio02ClaseBisAplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/CursoOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/CursoOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/MainDeMentira.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/MainDeMentira.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/RepositorioProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio02Clase - bis/src/main/java/edu/trianasalesianos/dam/apartado02/RepositorioProfesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pruebaEjercicioRelaciones/db/database.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../pruebaEjercicioRelaciones/db/database.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pruebaEjercicioRelaciones/src/main/java/edu/trianasalesianos/edu/pruebaEjercicioRelaciones/CursoOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pruebaEjercicioRelaciones/src/main/java/edu/trianasalesianos/edu/pruebaEjercicioRelaciones/CursoOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pruebaEjercicioRelaciones/src/main/java/edu/trianasalesianos/edu/pruebaEjercicioRelaciones/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pruebaEjercicioRelaciones/src/main/java/edu/trianasalesianos/edu/pruebaEjercicioRelaciones/Profesor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +76,7 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pilar/Documents/Salesianos DAM/AD-PSP/Ejercicio02Clase - bis",
+    "last_opened_file_path": "C:/Users/aguilar.dimar23_tria/Desktop/AD-PSP/Ejercicio02Clase",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>

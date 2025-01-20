@@ -1,5 +1,6 @@
-package edu.trianasalesianos.dam.apartado02;
+package edu.trianasalesianos.dam;
 
+import edu.trianasalesianos.dam.apartado02.*;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
