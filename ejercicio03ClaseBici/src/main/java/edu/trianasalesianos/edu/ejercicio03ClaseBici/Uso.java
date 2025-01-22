@@ -28,5 +28,9 @@ public class Uso {
                 fetch = FetchType.EAGER)
     private Bicicleta bicicleta;
 
+    @ManyToOne(cascade = CascadeType.PERSIST,
+                fetch = FetchType.EAGER)
+    private Estacion estacion;
+
 
 }

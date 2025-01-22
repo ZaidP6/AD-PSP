@@ -26,4 +26,7 @@ public class Estacion {
             fetch = FetchType.EAGER,
             orphanRemoval = true)
     private List<Bicicleta>listaBicis;
+
+    @OneToMany(mappedBy = "estacion", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
+    private List<Uso> listaUsos;
 }
