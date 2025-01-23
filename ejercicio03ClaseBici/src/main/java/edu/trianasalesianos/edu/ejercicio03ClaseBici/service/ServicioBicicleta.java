@@ -16,7 +16,7 @@ public class ServicioBicicleta {
     public List<Bicicleta> findAll(){
         List<Bicicleta> listaBicis =repoBici.findAll();
         if(listaBicis.isEmpty()){
-            throw new EntityNotFoundException("No se han enctrado bicicletas")
+            throw new EntityNotFoundException("No se han enctrado bicicletas");
         }else
             return listaBicis;
     }
