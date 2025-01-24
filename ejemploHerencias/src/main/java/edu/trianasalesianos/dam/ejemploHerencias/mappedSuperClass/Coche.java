@@ -2,6 +2,7 @@ package edu.trianasalesianos.dam.ejemploHerencias.mappedSuperClass;
 
 import jakarta.persistence.Entity;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @AllArgsConstructor
@@ -9,7 +10,7 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
-@Builder
+@SuperBuilder
 public class Coche extends Vehiculo{
 
     private int numPlazas;

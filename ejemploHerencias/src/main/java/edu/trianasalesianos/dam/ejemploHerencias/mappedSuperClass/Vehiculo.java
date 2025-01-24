@@ -6,10 +6,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @AllArgsConstructor
 @MappedSuperclass
 @NoArgsConstructor
+@SuperBuilder
 public abstract class Vehiculo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
