@@ -1,0 +1,13 @@
+package com.trianasalesianos.dam.ejemplosecurityjwt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EjemplosecurityjwtApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EjemplosecurityjwtApplication.class, args);
+	}
+
+}
