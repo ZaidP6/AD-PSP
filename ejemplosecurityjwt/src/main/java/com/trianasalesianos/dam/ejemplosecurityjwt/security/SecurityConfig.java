@@ -66,7 +66,7 @@ public class SecurityConfig {
 
         http
                 .cors(Customizer.withDefaults())
-                .csrf().disable()
+                .csrf(csrf -> csrf.disable())
                 .exceptionHandling()
                 .authenticationEntryPoint(jwtAuthenticationEntryPoint)
                 .accessDeniedHandler(jwtAccessDeniedHandler)
