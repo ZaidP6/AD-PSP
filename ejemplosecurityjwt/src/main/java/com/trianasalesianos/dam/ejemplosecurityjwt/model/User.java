@@ -8,12 +8,16 @@ import org.hibernate.annotations.Parameter;
 import org.hibernate.proxy.HibernateProxy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 
 @Entity
@@ -25,7 +29,7 @@ import java.util.UUID;
 @Builder
 @Table(name="user_entity")
 @EntityListeners(AuditingEntityListener.class)
-public class Usuario {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(generator = "UUID")
@@ -70,13 +74,27 @@ public class Usuario {
 
 
     @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles.stream()
+                .map(role -> "ROLE_" + role)
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public String getPassword() {
+        return "";
+    }
+
+
+    @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
         if (o == null) return false;
         Class<?> oEffectiveClass = o instanceof HibernateProxy ? ((HibernateProxy) o).getHibernateLazyInitializer().getPersistentClass() : o.getClass();
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
-        Usuario usuario = (Usuario) o;
+        User usuario = (User) o;
         return getId() != null && Objects.equals(getId(), usuario.getId());
     }
 
