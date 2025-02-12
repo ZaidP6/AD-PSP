@@ -66,10 +66,11 @@ public class JwtProvider {
                 );
 
         return Jwts.builder()
-                .setHeaderParam("typ", TOKEN_TYPE)
-                .setSubject(user.getId().toString())
-                .setIssuedAt(new Date())
-                .setExpiration(tokenExpirationDateTime)
+                .header().type(TOKEN_TYPE)
+                .and()
+                .Subject(user.getId().toString())
+                .IssuedAt(new Date())
+                .Expiration(tokenExpirationDateTime)
                 .signWith(secretKey)
                 .compact();
 

@@ -29,4 +29,7 @@ public record UserResponse (
                 .build();
     }
 
+    public static UserResponse of(User user) {
+        
+    }
 }

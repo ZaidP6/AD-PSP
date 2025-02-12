@@ -3,6 +3,7 @@ package com.trianasalesianos.dam.ejemplosecurityjwt.service;
 
 import com.trianasalesianos.dam.ejemplosecurityjwt.dto.CreateUserDto;
 import com.trianasalesianos.dam.ejemplosecurityjwt.repository.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -46,7 +47,8 @@ public class UserService {
     }
 
     public Optional<User> findById(UUID id) {
-        return userRepository.findById(id);
+        return userRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException);
     }
 
     public Optional<User> findByUsername(String username) {
