@@ -2,18 +2,17 @@ package com.trianasalesianos.dam.ejemplosecurityjwt.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.trianasalesianos.dam.ejemplosecurityjwt.model.User;
-import lombok.*;
-import lombok.experimental.SuperBuilder;
-
 import java.time.LocalDateTime;
+import java.util.UUID;
 
-@Data
-@NoArgsConstructor @AllArgsConstructor
-@SuperBuilder
-public class UserResponse {
 
-    protected String id;
-    protected String username, avatar, fullName;
+public record UserResponse (
+        UUID id,
+        String username,
+        String avatar,
+        String fullName){
+
+
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm:ss")
     protected LocalDateTime createdAt;

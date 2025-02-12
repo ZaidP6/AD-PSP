@@ -8,5 +8,6 @@ import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
 
+    //Siempre devbuelve 1, por eso el First, ademas de que debe ser unico
     Optional<User> findFirstByUsername(String username);
 }

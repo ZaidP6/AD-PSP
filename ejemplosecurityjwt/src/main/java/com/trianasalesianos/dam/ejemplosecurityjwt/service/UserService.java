@@ -23,10 +23,10 @@ public class UserService {
 
     public User createUser(CreateUserDto createUserRequest, EnumSet<UserRole> roles) {
         User user =  User.builder()
-                .username(createUserRequest.getUsername())
-                .password(passwordEncoder.encode(createUserRequest.getPassword()))
-                .avatar(createUserRequest.getAvatar())
-                .fullName(createUserRequest.getFullName())
+                .username(createUserRequest.username())
+                .password(passwordEncoder.encode(createUserRequest.password()))
+                .avatar(createUserRequest.avatar())
+                .fullName(createUserRequest.fullName())
                 .roles(roles)
                 .build();
 
