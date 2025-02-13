@@ -3,20 +3,20 @@ package com.trianasalesianos.dam.ejemplosecurityjwt.security;
 import com.trianasalesianos.dam.ejemplosecurityjwt.model.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SignatureException;
 import jakarta.annotation.PostConstruct;
-import lombok.Value;
-import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Value;
+//import lombok.extern.java.Log;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
-import java.security.SignatureException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.UUID;
 
-@Log
+//@Log
 @Service
 public class JwtProvider {
 
@@ -27,8 +27,8 @@ public class JwtProvider {
     @Value("${jwt.secret}")
     private String jwtSecret;
 
-    @Value("${jwt.duration}")
     //private int jwtLifeInDays;
+    @Value("${jwt.duration}")
     private int jwtLifeInMinutes;
 
     private JwtParser jwtParser;
@@ -40,9 +40,13 @@ public class JwtProvider {
 
         secretKey = Keys.hmacShaKeyFor(jwtSecret.getBytes());
 
-        jwtParser = Jwts.parserBuilder()
-                .setSigningKey(secretKey)
+        jwtParser = Jwts.parser()
+                .verifyWith(secretKey)
                 .build();
+
+//        jwtParser = Jwts.parserBuilder()
+//                .setSigningKey(secretKey)
+//                .build();
     }
 
 
@@ -69,17 +73,16 @@ public class JwtProvider {
                 .header().type(TOKEN_TYPE)
                 .and()
                 .Subject(user.getId().toString())
-                .IssuedAt(new Date())
-                .Expiration(tokenExpirationDateTime)
+                .issuedAt(new Date())
+                .expiration(tokenExpirationDateTime)
                 .signWith(secretKey)
                 .compact();
 
     }
 
     public UUID getUserIdFromJwtToken(String token) {
-        return UUID.fromString(
-                jwtParser.parseClaimsJws(token).getBody().getSubject()
-        );
+        String sub = jwtParser.parseClaimsJws(token).getBody().getSubject()
+        return UUID.fromString(sub);
     }
 
 
@@ -88,9 +91,9 @@ public class JwtProvider {
         try {
             jwtParser.parseClaimsJws(token);
             return true;
-        } catch (SignatureException | MalformedJwtException | ExpiredJwtException | UnsupportedJwtException | IllegalArgumentException ex) {
+        } catch(SignatureException | MalformedJwtException | ExpiredJwtException | UnsupportedJwtException | IllegalArgumentException ex) {
             log.info("Error con el token: " + ex.getMessage());
-            throw new JwtTokenException(ex.getMessage());
+            throw new JwtException(ex.getMessage());
         }
         //return false;
 
