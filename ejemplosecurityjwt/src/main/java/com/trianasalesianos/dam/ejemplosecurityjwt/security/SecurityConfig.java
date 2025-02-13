@@ -24,15 +24,14 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import java.util.List;
 
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @RequiredArgsConstructor
 public class SecurityConfig {
 
     private final UserDetailsService userDetailsService;
     private final PasswordEncoder passwordEncoder;
-
     private final AuthenticationEntryPoint jwtAuthenticationEntryPoint;
     private final AccessDeniedHandler jwtAccessDeniedHandler;
     private final JwtFilter jwtAuthenticationFilter;
@@ -43,11 +42,9 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
         AuthenticationManagerBuilder authenticationManagerBuilder =
                 http.getSharedObject(AuthenticationManagerBuilder.class);
-
         AuthenticationManager authManager =
                 authenticationManagerBuilder.authenticationProvider(authenticationProvider())
                         .build();
-
         return authManager;
     }
 
@@ -60,7 +57,6 @@ public class SecurityConfig {
         authenticationProvider.setHideUserNotFoundExceptions(false);
 
         return authenticationProvider;
-
     }
 
     @Bean
@@ -68,40 +64,28 @@ public class SecurityConfig {
 
         http.cors(Customizer.withDefaults());
         http.csrf(csrf -> csrf.disable());
-        http.sessionManagement((session)->
-                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        http.sessionManagement((session)-> session
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.authorizeHttpRequests(authz -> authz
                 .requestMatchers(HttpMethod.POST, "/auth/register", "/auth/login").permitAll()
-                        .anyRequest().authenticated();
+                .anyRequest().authenticated());
+
         /*
-        http)
-
-
-                .exceptionHandling()
+         http.exceptionHandling()
                 .authenticationEntryPoint(jwtAuthenticationEntryPoint)
-                .accessDeniedHandler(jwtAccessDeniedHandler)
-                .and()
-
-                .and()
-                .authorizeRequests()
-                .antMatchers("/note/**").hasRole("USER")
-                .antMatchers("/auth/register/admin").hasRole("ADMIN")
-                .anyRequest().authenticated();
+                .accessDeniedHandler(jwtAccessDeniedHandler);
          */
 
-
-
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-
-
-        http.headers().frameOptions().disable();
 
         return http.build();
     }
 
+    /*
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web -> web.ignoring()
                 .antMatchers("/h2-console/**", "/auth/register", "/auth/login", "/refreshtoken"));
     }
+     */
 }
