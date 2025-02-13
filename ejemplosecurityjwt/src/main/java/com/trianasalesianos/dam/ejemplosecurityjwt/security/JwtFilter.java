@@ -2,39 +2,42 @@ package com.trianasalesianos.dam.ejemplosecurityjwt.security;
 
 
 import com.trianasalesianos.dam.ejemplosecurityjwt.model.User;
-import com.trianasalesianos.dam.ejemplosecurityjwt.service.UserService;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.trianasalesianos.dam.ejemplosecurityjwt.repository.UserRepository;
+//import lombok.RequiredArgsConstructor;
+//import com.trianasalesianos.dam.ejemplosecurityjwt.service.UserService;
+//import lombok.extern.java.Log;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
-import org.springframework.web.servlet.HandlerExceptionResolver;
+//import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
+
 import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
 
-@Log
+//@Log
 @Component
 @RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
 
-    private final UserService userService;
+    //private final UserService userService;
+    private final UserRepository userRepository;
     private final JwtProvider jwtProvider;
 
-    @Autowired
-    @Qualifier("handlerExceptionResolver")
-    private HandlerExceptionResolver resolver;
-
+//    @Autowired
+//    @Qualifier("handlerExceptionResolver")
+//    private HandlerExceptionResolver resolver;
 
 
     @Override
@@ -44,11 +47,19 @@ public class JwtFilter extends OncePerRequestFilter {
 
         String token = getJwtTokenFromRequest(request);
 
+        //Validar token
+        //Si es válido, autenticar al usuario
+
         try {
             if (StringUtils.hasText(token) && jwtProvider.validateToken(token)) {
+
+                // Obtener el sub del token, que es el ID del usuario
+                // Buscar el usuario por id
+                // Colocar el usuario autenticado en el contexto de seguridad
+
                 UUID userId = jwtProvider.getUserIdFromJwtToken(token);
 
-                Optional<User> result = userService.findById(userId);
+                Optional<User> result = userRepository.findById(userId);
 
                 if (result.isPresent()) {
                     User user = result.get();
