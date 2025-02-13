@@ -10,10 +10,7 @@ import org.springframework.stereotype.Service;
 import com.trianasalesianos.dam.ejemplosecurityjwt.model.User;
 import com.trianasalesianos.dam.ejemplosecurityjwt.model.UserRole;
 
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -22,13 +19,13 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
 
-    public User createUser(CreateUserDto createUserRequest, EnumSet<UserRole> roles) {
+    public User createUser(CreateUserDto createUserRequest) {
         User user =  User.builder()
                 .username(createUserRequest.username())
                 .password(passwordEncoder.encode(createUserRequest.password()))
                 .avatar(createUserRequest.avatar())
                 .fullName(createUserRequest.fullName())
-                .roles(roles)
+                .roles(Set.of(UserRole.USER))
                 .build();
 
         return userRepository.save(user);
