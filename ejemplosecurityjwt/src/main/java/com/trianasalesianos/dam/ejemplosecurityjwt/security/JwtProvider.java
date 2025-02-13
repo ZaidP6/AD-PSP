@@ -40,13 +40,13 @@ public class JwtProvider {
 
         secretKey = Keys.hmacShaKeyFor(jwtSecret.getBytes());
 
-        jwtParser = Jwts.parser()
-                .verifyWith(secretKey)
-                .build();
-
-//        jwtParser = Jwts.parserBuilder()
-//                .setSigningKey(secretKey)
+//        jwtParser = Jwts.parser()
+//                .verifyWith(secretKey)
 //                .build();
+
+        jwtParser = Jwts.parserBuilder()
+                .setSigningKey(secretKey)
+                .build();
     }
 
 
@@ -92,7 +92,7 @@ public class JwtProvider {
             jwtParser.parseClaimsJws(token);
             return true;
         } catch(SignatureException | MalformedJwtException | ExpiredJwtException | UnsupportedJwtException | IllegalArgumentException ex) {
-            log.info("Error con el token: " + ex.getMessage());
+            //log.info("Error con el token: " + ex.getMessage());
             throw new JwtException(ex.getMessage());
         }
         //return false;
